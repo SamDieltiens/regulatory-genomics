@@ -1,0 +1,9 @@
+# Data of each topic: working directory of the notebooks (fastq, bam, genome, counts, logs, ...)
+topics/*/data/
+
+# Website build output (Jupyter Book)
+_build/
+
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/

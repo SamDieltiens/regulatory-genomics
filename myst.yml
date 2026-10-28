@@ -1,0 +1,27 @@
+# Jupyter Book (v2) configuration, see https://jupyterbook.org
+# Build locally with: jupyter-book build --html   (output in _build/html)
+version: 1
+project:
+  title: Regulatory genomics
+  description: Practicals for the course regulatory genomics.
+  authors:
+    - name: Seppe De Winter
+  # Notebooks are rendered with their saved outputs, they are not executed during the build.
+  exclude:
+    - archive/**
+    - tools/**
+    - topics/*/data/**
+    - topics/*/scripts/**
+    - README.md
+    - CLAUDE.md
+  toc:
+    - file: index.md
+    # one entry per topic
+    - file: topics/bulk-rna-seq/index.md
+      children:
+        - file: topics/bulk-rna-seq/part_1_reads_to_counts.ipynb
+        - file: topics/bulk-rna-seq/part_2_differential_expression.ipynb
+site:
+  template: book-theme
+  options:
+    folders: true   # URLs follow the folder structure, e.g. /topics/bulk-rna-seq/
