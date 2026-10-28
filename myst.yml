@@ -37,6 +37,17 @@ project:
       children:
         - file: topics/spatial-transcriptomics/Regulatory_genomics_example_spatial_transcriptomics_of_the_mouse_liver.ipynb
 
+    # ChIP-seq
+    - file: topics/chip-seq/index.md
+      children:
+        - file: topics/chip-seq/ChIP-seq.ipynb
+
+    # MPRA
+    - file: topics/mpra/index.md
+      children:
+        - file: topics/mpra/MPRA_part_1_reads_to_counts.ipynb
+        - file: topics/mpra/MPRA_part_2_activity_and_interpretation.ipynb
+
 site:
   template: book-theme
   options:
