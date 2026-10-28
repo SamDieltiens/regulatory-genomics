@@ -1,11 +1,14 @@
 # Jupyter Book (v2) configuration, see https://jupyterbook.org
 # Build locally with: jupyter-book build --html   (output in _build/html)
+
 version: 1
+
 project:
   title: Regulatory genomics
   description: Practicals for the course regulatory genomics.
   authors:
     - name: Seppe De Winter
+
   # Notebooks are rendered with their saved outputs, they are not executed during the build.
   exclude:
     - archive/**
@@ -14,13 +17,26 @@ project:
     - topics/*/scripts/**
     - README.md
     - CLAUDE.md
+
   toc:
     - file: index.md
-    # one entry per topic
+
+    # Bulk RNA-seq
     - file: topics/bulk-rna-seq/index.md
       children:
         - file: topics/bulk-rna-seq/part_1_reads_to_counts.ipynb
         - file: topics/bulk-rna-seq/part_2_differential_expression.ipynb
+
+    # Single-nucleus RNA-seq
+    - file: topics/single-nucleus-rna-seq/index.md
+      children:
+        - file: topics/single-nucleus-rna-seq/Regulatory_genomics_example_single_nucleus_RNA_seq_of_the_mouse_liver.ipynb
+
+    # Spatial transcriptomics
+    - file: topics/spatial-transcriptomics/index.md
+      children:
+        - file: topics/spatial-transcriptomics/Regulatory_genomics_example_spatial_transcriptomics_of_the_mouse_liver.ipynb
+
 site:
   template: book-theme
   options:
